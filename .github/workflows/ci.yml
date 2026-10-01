@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm ci
+      - run: npm install --no-audit --no-fund
       - run: npm run build
       - name: Verify production build artifacts
         run: test -d .next && test -f .next/BUILD_ID
