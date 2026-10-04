@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_SUPABASE_URL: https://umyvivdjxvpdymvnkghd.supabase.co
-      NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY }}
+      NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || 'ci-placeholder-publishable-key' }}
       NEXT_PUBLIC_SITE_URL: http://localhost:3000
     steps:
       - uses: actions/checkout@v4
